@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Jan Ken</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="jogo" class="container">
+        <h1>
+            Jogo Jan Ken
+        </h1>
+
+        <div class="bloco">
+            <div class="label bg-verde">USER</div>
+            <div class="label bg-vermelho">PC</div>
+            <div id="contador" class="placar">
+                0:0
+            </div>
+        </div>
+
+        <div class="bloco bg-cinza selected-image">
+            <div id="user">
+                <img src="img/botao-pedra.png">
+            </div>
+            <div id="pc" class="reverse"></div>
+        </div>
+        
+        <h2> Escolha seu movimento</h2>
+
+        <div class="buttons">
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="botao-pedra" checked>
+                <button class="btn"><img src="img/botao-pedra.png"></button>
+            </label>
+
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="botao-tesoura" checked>
+                <button class="btn"><img src="img/botao-tesoura.png"></button>
+            </label>
+
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="botao-papel" checked>
+                <button class="btn"><img src="img/botao-papel.png"></button>
+            </label>
+        </div>
+
+        <div class="bloco">
+            <button id="playing" class="btn-play">Jogar</button>
+        </div>
+
+        <div id="winner" class="container end-screen none"> <!-- none deixa o objeto oculto-->
+            <span> 🏆🏆🏆🏆🏆</span>
+            <!--Windows + .-->
+            <h3>Você Ganhou !!</h3>
+            <button onclick="newGame()"> Jogar novamente</button>
+            <!--Criando um botão com a ação newgame-->
+        </div>
+
+        <div id="loser" class="container end-screen none"> <!-- none deixa o objeto oculto-->
+            <!--Windows + .-->
+            <h3>YOU LOSE!!!</h3>
+            <button onclick="newGame()"> Jogar novamente</button>
+            <!--Criando um botão com a ação newgame-->
+        </div>
+
+        <script src="javascript/script.js"></script>
+</body>
+
+</html>
